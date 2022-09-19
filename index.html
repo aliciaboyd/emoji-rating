@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Rating</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *, *::after, *::before {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Outfit', sans-serif;
+          height: 100vh;
+          background-color: #ededed;
+          display: flex;
+          justify-items: center;
+          font-size: 16px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+          background-color: #ffffff;
+          width: clamp(200px, 80vw, 500px);
+          height: 400px;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          box-shadow: 1px 20px 10px #222f4d06;
+          /* text-align: center; */
+        }
+
+        h1 {
+          text-align: center;
+          font-weight: 2rem;
+          color: #222f4d;
+          font-weight: 600;
+        } 
+
+        .emoji-container {
+          position: relative;
+          margin: 2.5rem auto 3rem; 
+          width: 100%;
+        }
+
+        .emoji-group {
+          position: absolute;
+          top: -1.5rem;
+          transform: translate(-50%);
+          width: 50px;
+          height: 50px;
+          /* background-color: red; */
+          left: 50%;
+          border-radius: 25px;
+          display: flex;
+          flex-direction: row;
+          overflow: hidden;
+        }
+        
+        .fa-regular {
+          margin: 2px 1px 1px;
+          transform: translateX(-100px);
+
+        }
+
+        .fa-face-angry {
+          color: #c41700;
+        }
+        .fa-face-frown {
+          color: #e86f04;
+        }
+        .fa-face-meh {
+          color: #ffbb00;
+        }
+        .fa-face-smile {
+          color: #a1d015;
+        }
+        .fa-face-laugh {
+          color: #13a100;
+        }
+
+        .fa-star {
+          color: #222f4d79;
+          cursor: pointer;
+        }
+
+        .active {
+          color: #ffbb00;
+        }
+
+
+    </style>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    
+    <main class="rating">
+      <h1>How would you rate <br/>your experience?</h1>
+      <div class="emoji-container">
+        <div class="emoji-group">
+          <i class="fa-regular fa-face-angry fa-3x"></i>
+          <i class="fa-regular fa-face-frown fa-3x"></i>
+          <i class="fa-regular fa-face-meh fa-3x"></i>
+          <i class="fa-regular fa-face-smile fa-3x"></i>
+          <i class="fa-regular fa-face-laugh fa-3x"></i>
+        </div>
+      </div>
+      <div class="star-container">
+        <i class="fa-solid fa-star fa-2x active"></i>
+        <i class="fa-solid fa-star fa-2x active"></i>
+        <i class="fa-solid fa-star fa-2x active"></i>
+        <i class="fa-solid fa-star fa-2x"></i>
+        <i class="fa-solid fa-star fa-2x"></i>
+      </div>
+    </main>
+
+  </body>
+</html>
